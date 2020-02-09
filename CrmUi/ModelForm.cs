@@ -28,7 +28,7 @@ namespace CrmUi
                 cashBoxes.Add(box);
                 Controls.Add(box.CashDeskName);
                 Controls.Add(box.Price);
-                Controls.Add(box.QueueLenght);
+                Controls.Add(box.QueueLength);
                 Controls.Add(box.LeaveCustomersCount);
             }
 
@@ -44,14 +44,19 @@ namespace CrmUi
             numericUpDown2.Value = model.CashDeskSpeed;
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             model.CustomerSpeed = (int)numericUpDown1.Value;
         }
 
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        private void NumericUpDown2_ValueChanged(object sender, EventArgs e)
         {
             model.CashDeskSpeed = (int)numericUpDown2.Value;
+        }
+
+        private void ModelForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            model.Stop();
         }
     }
 }

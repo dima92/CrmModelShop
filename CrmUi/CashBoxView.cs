@@ -10,7 +10,7 @@ namespace CrmUi
 
         public Label CashDeskName { get; set; }
         public NumericUpDown Price { get; set; }
-        public ProgressBar QueueLenght { get; set; }
+        public ProgressBar QueueLength { get; set; }
         public Label LeaveCustomersCount { get; set; }
 
         public CashBoxView(CashDesk cashDesk, int number, int x, int y)
@@ -19,7 +19,7 @@ namespace CrmUi
 
             CashDeskName = new Label();
             Price = new NumericUpDown();
-            QueueLenght = new ProgressBar();
+            QueueLength = new ProgressBar();
             LeaveCustomersCount = new Label();
 
             CashDeskName.AutoSize = true;
@@ -36,12 +36,12 @@ namespace CrmUi
             Price.TabIndex = number;
             Price.Maximum = 1000000000000000;
 
-            QueueLenght.Location = new System.Drawing.Point(x + 250, y);
-            QueueLenght.Maximum = cashDesk.MaxQueueLength;
-            QueueLenght.Name = "progressBar" + number;
-            QueueLenght.Size = new System.Drawing.Size(100, 23);
-            QueueLenght.TabIndex = number;
-            QueueLenght.Value = 0;
+            QueueLength.Location = new System.Drawing.Point(x + 250, y);
+            QueueLength.Maximum = cashDesk.MaxQueueLength;
+            QueueLength.Name = "progressBar" + number;
+            QueueLength.Size = new System.Drawing.Size(100, 23);
+            QueueLength.TabIndex = number;
+            QueueLength.Value = 0;
 
             LeaveCustomersCount.AutoSize = true;
             LeaveCustomersCount.Location = new System.Drawing.Point(x + 400, y);
@@ -58,7 +58,7 @@ namespace CrmUi
             Price.Invoke((Action)delegate
             {
                 Price.Value += e.Price;
-                QueueLenght.Value = cashDesk.Count;
+                QueueLength.Value = cashDesk.Count;
                 LeaveCustomersCount.Text = cashDesk.ExitCustomer.ToString();
             });
         }
