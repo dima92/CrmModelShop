@@ -23,6 +23,7 @@ namespace CrmBl.Model
             Seller = seller;
             Queue = new Queue<Cart>();
             IsModel = true;
+            MaxQueueLength = 10;
         }
 
         public void Enqueue(Cart cart)
@@ -104,6 +105,11 @@ namespace CrmBl.Model
             }
 
             return sum;
+        }
+
+        public override string ToString()
+        {
+            return $" Касса №{Number}";
         }
     }
 }

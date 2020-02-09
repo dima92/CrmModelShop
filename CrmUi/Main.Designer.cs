@@ -41,6 +41,7 @@
             this.CustomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.customerAddToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.CheckToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.моделированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
@@ -78,7 +79,8 @@
             // menuStrip2
             // 
             this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.сущностиToolStripMenuItem1});
+            this.сущностиToolStripMenuItem1,
+            this.моделированиеToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Size = new System.Drawing.Size(880, 24);
@@ -108,7 +110,7 @@
             // productAddToolStripMenuItem
             // 
             this.productAddToolStripMenuItem.Name = "productAddToolStripMenuItem";
-            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productAddToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.productAddToolStripMenuItem.Text = "Добавить";
             this.productAddToolStripMenuItem.Click += new System.EventHandler(this.ProductAddToolStripMenuItem_Click);
             // 
@@ -151,6 +153,13 @@
             this.CheckToolStripMenuItem.Text = "Чек";
             this.CheckToolStripMenuItem.Click += new System.EventHandler(this.CheckToolStripMenuItem_Click);
             // 
+            // моделированиеToolStripMenuItem
+            // 
+            this.моделированиеToolStripMenuItem.Name = "моделированиеToolStripMenuItem";
+            this.моделированиеToolStripMenuItem.Size = new System.Drawing.Size(109, 20);
+            this.моделированиеToolStripMenuItem.Text = "Моделирование";
+            this.моделированиеToolStripMenuItem.Click += new System.EventHandler(this.modelToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +193,7 @@
         private System.Windows.Forms.ToolStripMenuItem productAddToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sellerAddToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem customerAddToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem моделированиеToolStripMenuItem;
     }
 }
 
